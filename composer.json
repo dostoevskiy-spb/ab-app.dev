@@ -8,13 +8,13 @@
     "boilerplate",
     "template"
   ],
-  "homepage":"http://2amigos.us",
-  "type":"yii-application",
-  "license":"BSD-3-Clause",
-  "minimum-stability":"dev",
-  "config":{
-    "vendor-dir":"common/lib/vendor"
-  },
+    "homepage":"http://2amigos.us",
+    "type":"yii-application",
+    "license":"BSD-3-Clause",
+    "minimum-stability":"dev",
+    "config":{
+        "vendor-dir":"common/lib/vendor"
+    },
   "authors":[
     {
       "name":"Antonio Ramirez Cobos",
