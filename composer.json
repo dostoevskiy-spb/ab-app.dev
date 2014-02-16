@@ -36,8 +36,7 @@
   "require":{
     "yiisoft/yii":"1.1.14",
     "2amigos/yiiwheels":"1.0.3",
-    "malyshev/yii-debug-toolbar":"dev-master",
-    "z_bodya/yii-image":"dev-master"
+    "malyshev/yii-debug-toolbar":"dev-master"
   },
   "autoload":{
     "psr-0":{
