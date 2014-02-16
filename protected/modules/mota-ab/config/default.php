@@ -6,6 +6,10 @@ return array(
         'image'  => array(
             'class' => 'mota-ab.extensions.image.Image',
         ),
+        'import' => array(
+            'mota-ab.models',
+            'mota-ab.components'
+        ),
         'log'    => array(
             'routes' => array(
                 array(
@@ -21,7 +25,7 @@ return array(
             'connectionString' => 'sqlite:' . $_SERVER['DOCUMENT_ROOT'] . '/protected/modules/mota-ab/data/private.sl3'
         ),
         'rules'  => array(
-            ''                                               => '',
+            ''                                               => 'mota-ab/site/index',
             'backend/<act:(login|logout)>'                   => 'mota-ab/backend/site/<act>',
             'backend'                                        => 'mota-ab/backend/site',
             'backend/<controller:\w+>/<id:\d+>'              => 'mota-ab/backend/<controller>/view',
