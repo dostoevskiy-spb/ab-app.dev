@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="4075555180">
+    <data-source source="LOCAL" name="Data Source" uuid="8bdfb07c-d38c-45ee-a5f4-54b88f160456">
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:D:\Projects\ab-app.dev\protected\data\mota.sl3</jdbc-url>
+      <libraries>
+        <library>
+          <url>jar://$PROJECT_DIR$/sqlitejdbc-v056.jar!/</url>
+        </library>
+        <library>
+          <url>file://$PROJECT_DIR$/zentus-sqlite-license.txt</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Data Source" product="SQLite" version="3.6.3" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="8bdfb07c-d38c-45ee-a5f4-54b88f160456">
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <synchronize>true</synchronize>
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:D:\Projects\ab-app.dev\protected\data\mota.sl3</jdbc-url>
+    <libraries>
+      <library>
+        <url>jar://$PROJECT_DIR$/sqlitejdbc-v056.jar!/</url>
+      </library>
+      <library>
+        <url>file://$PROJECT_DIR$/zentus-sqlite-license.txt</url>
+      </library>
+    </libraries>
+    <schema name="" catalog=""/>
+    <table name="ORDERS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR(250)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="mail" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR(50)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="comment" sqlType="BLOB" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="page" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="source" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="date" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="ip" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="pay" sqlType="INT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="ticket" sqlType="INT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="type" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="quantity" sqlType="INT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="PAGE" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="html" sqlType="BLOB" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="active" sqlType="INT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="SETTINGS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="SOURCE" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="title" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="USERS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="username" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="VISITS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="ip" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="source" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="page" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="date" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+  </data-source>
+</component>
