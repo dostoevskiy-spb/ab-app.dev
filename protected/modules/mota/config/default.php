@@ -49,7 +49,7 @@ return array(
         '/'                                            => 'mota/default/index',
         'backend/<act:(login|logout)>'                 => 'mota/backend/default/<act>',
         'backend'                                      => 'mota/backend/default',
-        'backend/<con: (visits|orders|settings|page)>' => 'mota/backend/<con>',
+        'backend/<con:(visits|orders|settings|page)>' => 'mota/backend/<con>',
         'order'                                        => 'mota/default/order',
         'order/<action>'                               => 'mota/default/<action>',
         'newRequest'                                   => 'mota/default/newRequest',
