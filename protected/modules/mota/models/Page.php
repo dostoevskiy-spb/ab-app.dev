@@ -49,7 +49,7 @@ class Page extends CActiveRecord
      */
     public function tableName()
     {
-        return 'page';
+        return '{{page}}';
     }
 
     /**

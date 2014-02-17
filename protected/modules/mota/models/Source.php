@@ -24,7 +24,7 @@ class Source extends CActiveRecord
      */
     public function tableName()
     {
-        return 'source';
+        return '{{source}}';
     }
 
 

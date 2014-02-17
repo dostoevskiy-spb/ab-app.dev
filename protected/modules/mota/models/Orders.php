@@ -62,7 +62,7 @@ class Orders extends CActiveRecord
      */
     public function tableName()
     {
-        return 'orders';
+        return '{{orders}}';
     }
 
     public function scopes()

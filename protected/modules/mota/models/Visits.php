@@ -51,7 +51,7 @@ class Visits extends CActiveRecord
      */
     public function tableName()
     {
-        return 'visits';
+        return '{{visits}}';
     }
 
     /**
