@@ -5,9 +5,6 @@ Yii::setPathOfAlias('mota', __DIR__ . '/../');
 return array(
     'module'     => array(
         'class'             => 'application.modules.mota.MotaModule',
-        'modules'           => array(
-            'users',
-        )
     ),
     'import'     => array(
         'application.modules.mota.models.*',
@@ -16,6 +13,7 @@ return array(
     ),
     'preload'    => array(
         'log',
+        'users',
     ),
     'components' => array(
         'image'  => array(
@@ -24,6 +22,10 @@ return array(
             'driver' => 'GD',
             // ImageMagick setup path
             'params' => array('directory' => '/opt/local/bin'),
+        ),
+        'user'=>array(
+            'allowAutoLogin' => TRUE,
+            'loginUrl'       => array('backend/login'),
         ),
         /*'errorHandler' => array(
             // use 'site/error' action to display errors
@@ -47,11 +49,8 @@ return array(
     ),
     'rules'      => array(
         '/'                                              => 'mota/default/index',
-        'backend/<act:(login|logout)>'                   => 'mota-ab/backend/site/<act>',
-        'backend'                                        => 'mota-ab/backend/site',
-        'backend/<controller:\w+>/<id:\d+>'              => 'mota-ab/backend/<controller>/view',
-        'backend/<controller:\w+>/<action:\w+>/<id:\d+>' => 'mota-ab/backend/<controller>/<action>',
-        'backend/<controller:\w+>/<action:\w+>'          => 'mota-ab/backend/<controller>/<action>',
+        'backend/<act:(login|logout)>'                   => 'mota/backend/default/<act>',
+        'backend'                                        => 'mota/backend/default',
         'order'                                          => 'site/order',
         'order/<action>'                                 => 'site/<action>',
         'newRequest'                                     => 'site/newRequest',

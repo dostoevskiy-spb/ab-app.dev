@@ -1,13 +1,13 @@
 <?php
-Yii::setPathOfAlias('users', 'application.modules.mota-ab.users');
+Yii::setPathOfAlias('users', __DIR__ . '/..');
 
 return array(
-    'import' => array(
+    'import'     => array(
         'users.models',
         'users.components'
     ),
     'components' => array(
-        'rules'  => array(
+        'rules' => array(
             ''                                               => 'mota-ab/site/index',
             'backend/<act:(login|logout)>'                   => 'mota-ab/backend/site/<act>',
             'backend'                                        => 'mota-ab/backend/site',

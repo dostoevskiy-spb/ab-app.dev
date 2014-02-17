@@ -127,13 +127,12 @@ $result = array(
                                                                 $config['rules']
                                                         ),
                                                             array(
-
                                                                 // общие правила
-//                                                                '<module:\w+>/<controller:\w+>/<action:[0-9a-zA-Z_\-]+>/<id:\d+>' => '<module>/<controller>/<action>',
-//                                                                '<module:\w+>/<controller:\w+>/<action:[0-9a-zA-Z_\-]+>'          => '<module>/<controller>/<action>',
-//                                                                '<module:\w+>/<controller:\w+>'                                   => '<module>/<controller>/index',
-                                                                '<controller:\w+>/<action:[0-9a-zA-Z_\-]+>' => '<controller>/<action>',
-                                                                '<controller:\w+>'                          => '<controller>/index',
+                                                                'backend/<module:\w+>/<controller:\w+>/<id:\d+>'              => '<module>/backend/<controller>/view',
+                                                                'backend/<module:\w+>/<controller:\w+>/<action:\w+>/<id:\d+>' => '<module>/backend/<controller>/<action>',
+                                                                'backend/<module:\w+>/<controller:\w+>/<action:\w+>'          => '<module>/backend/<controller>/<action>',
+                                                                '<controller:\w+>/<action:[0-9a-zA-Z_\-]+>'                   => '<controller>/<action>',
+                                                                '<controller:\w+>'                                            => '<controller>/index',
                                                             )
                                     ),
                             ),
