@@ -4,16 +4,14 @@ Yii::setPathOfAlias('mota', __DIR__ . '/../');
 //die();
 return array(
     'module'     => array(
-        'class'             => 'application.modules.mota.MotaModule',
+        'class' => 'application.modules.mota.MotaModule',
     ),
     'import'     => array(
-        'application.modules.mota.models.*',
-        'application.modules.mota.components.*',
-        'application.modules.controllers.*',
+        'mota.models.*',
+        'mota.components.*',
     ),
     'preload'    => array(
         'log',
-        'users',
     ),
     'components' => array(
         'image'  => array(
@@ -23,14 +21,14 @@ return array(
             // ImageMagick setup path
             'params' => array('directory' => '/opt/local/bin'),
         ),
-        'user'=>array(
+        'user'   => array(
             'allowAutoLogin' => TRUE,
             'loginUrl'       => array('backend/login'),
         ),
-        /*'errorHandler' => array(
+        'errorHandler' => array(
             // use 'site/error' action to display errors
-            'errorAction' => 'mota-ab/site/error',
-        ),*/
+            'errorAction' => 'mota/default/error',
+        ),
         'log'    => array(
             'class'  => 'CLogRouter',
             'routes' => array(
@@ -48,11 +46,12 @@ return array(
         ),
     ),
     'rules'      => array(
-        '/'                                              => 'mota/default/index',
-        'backend/<act:(login|logout)>'                   => 'mota/backend/default/<act>',
-        'backend'                                        => 'mota/backend/default',
-        'order'                                          => 'site/order',
-        'order/<action>'                                 => 'site/<action>',
-        'newRequest'                                     => 'site/newRequest',
+        '/'                                            => 'mota/default/index',
+        'backend/<act:(login|logout)>'                 => 'mota/backend/default/<act>',
+        'backend'                                      => 'mota/backend/default',
+        'backend/<con: (visits|orders|settings|page)>' => 'mota/backend/<con>',
+        'order'                                        => 'mota/default/order',
+        'order/<action>'                               => 'mota/default/<action>',
+        'newRequest'                                   => 'mota/default/newRequest',
     ),
 );

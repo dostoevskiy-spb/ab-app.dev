@@ -6,12 +6,9 @@ return array(
         'users.models',
         'users.components'
     ),
-    'components' => array(
-        'rules' => array(
-            'backend/users' => 'users/backend/default',
-//            'order'                                          => 'site/order',
-//            'order/<action>'                                 => 'site/<action>',
-//            'newRequest'                                     => 'site/newRequest',
-        ),
+    'rules' => array(
+        'backend/users' => 'users/backend/default',
+        'backend/users/<action:(delete|update)>/<id:\d+>' => 'users/backend/default/<action>/<id>',
+        'backend/users/<action:(create|admin)>' => 'users/backend/default/<action>',
     ),
 );
