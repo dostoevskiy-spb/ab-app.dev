@@ -1,6 +1,6 @@
 <?php
 
-class SiteController extends BackendController
+class DefaultController extends BackendController
 {
 
     /**

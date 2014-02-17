@@ -14,14 +14,14 @@ return array(
         'log',
     ),
     'components' => array(
-        'image'  => array(
+        'image'        => array(
             'class'  => 'mota.extensions.image.CImageComponent',
             // GD or ImageMagick
             'driver' => 'GD',
             // ImageMagick setup path
             'params' => array('directory' => '/opt/local/bin'),
         ),
-        'user'   => array(
+        'user'         => array(
             'allowAutoLogin' => TRUE,
             'loginUrl'       => array('backend/login'),
         ),
@@ -29,7 +29,7 @@ return array(
             // use 'site/error' action to display errors
             'errorAction' => 'mota/default/error',
         ),
-        'log'    => array(
+        'log'          => array(
             'class'  => 'CLogRouter',
             'routes' => array(
                 array(
@@ -40,18 +40,18 @@ return array(
             ),
         ),
         # Системная база данных
-        'motaDb' => array(
+        'motaDb'       => array(
             'class'            => 'CDbConnection',
             'connectionString' => 'sqlite:' . $_SERVER['DOCUMENT_ROOT'] . '/protected/modules/mota/data/private.sl3'
         ),
     ),
     'rules'      => array(
-        '/'                                            => 'mota/default/index',
-        'backend/<act:(login|logout)>'                 => 'mota/backend/default/<act>',
-        'backend'                                      => 'mota/backend/default',
-        'backend/<con:(visits|orders|settings|page)>' => 'mota/backend/<con>',
-        'order'                                        => 'mota/default/order',
-        'order/<action>'                               => 'mota/default/<action>',
-        'newRequest'                                   => 'mota/default/newRequest',
+        '/'                                                             => 'mota/default/index',
+        'backend/<act:(login|logout)>'                                  => 'mota/backend/default/<act>',
+        'backend'                                                       => 'mota/backend/default',
+        'backend/<con:(visits|orders|settings|page|statistics|source)>' => 'mota/backend/<con>',
+        'order'                                                         => 'mota/default/order',
+        'order/<action>'                                                => 'mota/default/<action>',
+        'newRequest'                                                    => 'mota/default/newRequest',
     ),
 );
