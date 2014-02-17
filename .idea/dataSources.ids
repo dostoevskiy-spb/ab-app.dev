@@ -46,7 +46,12 @@
     <table name="SOURCE" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <column name="title" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="column_name" sqlType="INT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <primary-key columns="id"/>
+    </table>
+    <table name="SQLITE_SEQUENCE" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="seq" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
     </table>
     <table name="USERS" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
@@ -55,7 +60,7 @@
       <primary-key columns="id"/>
     </table>
     <table name="VISITS" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <column name="ip" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <column name="source" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <column name="page" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>

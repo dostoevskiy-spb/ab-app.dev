@@ -1,5 +1,7 @@
 <?php
+//echo file_exists(__DIR__ . '/../data/mota.db');
+//die();
 return array(
-    'class'            => 'CDbConnection',
-    'connectionString' => 'sqlite:' .__DIR__ . '/../protected/data/mota.sl3'
+    'connectionString' => 'sqlite:' .__DIR__ . '/../data/mota.sl3'
 );
+
