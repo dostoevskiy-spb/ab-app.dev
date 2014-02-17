@@ -15,7 +15,7 @@
     </libraries>
     <schema name="" catalog=""/>
     <table name="ORDERS" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <column name="name" sqlType="VARCHAR(250)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <column name="mail" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <column name="phone" sqlType="VARCHAR(50)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
@@ -24,29 +24,28 @@
       <column name="source" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <column name="date" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <column name="ip" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
-      <column name="pay" sqlType="INT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
-      <column name="ticket" sqlType="INT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
-      <column name="type" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
-      <column name="quantity" sqlType="INT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="pay" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="ticket" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="type" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="quantity" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <primary-key columns="id"/>
     </table>
     <table name="PAGE" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <column name="html" sqlType="BLOB" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <column name="active" sqlType="INT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <primary-key columns="id"/>
     </table>
     <table name="SETTINGS" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <column name="phone" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <column name="email" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <primary-key columns="id"/>
     </table>
     <table name="SOURCE" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <column name="title" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
-      <column name="column_name" sqlType="INT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
       <primary-key columns="id"/>
     </table>
     <table name="SQLITE_SEQUENCE" schema="" catalog="" type="TABLE">
@@ -54,9 +53,9 @@
       <column name="seq" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
     </table>
     <table name="USERS" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INT" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
-      <column name="username" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
-      <column name="password" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="username" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
       <primary-key columns="id"/>
     </table>
     <table name="VISITS" schema="" catalog="" type="TABLE">
