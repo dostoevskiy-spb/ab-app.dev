@@ -1,5 +1,5 @@
 <?php
-require(dirname(__FILE__) . '{{yiiPath}}');
+require(dirname(__FILE__) . '/../frameworks/yii/YiiBase.php');
 
 // change the following paths if necessary
 //$yii=dirname(__FILE__).'/../../yii/yii.php';

@@ -75,6 +75,7 @@ class DefaultController extends Controller
             $model->attributes = $_POST['Orders'];
             $model->type       = Orders::TYPE_PHONE;
             $model->page       = Yii::app()->request->cookies['p']->value;
+            $model->source     = isset($_GET['source']) ? (int) $_GET['source'] : 1;
             $model->ip         = Yii::app()->request->userHostAddress;
             $d                 = new DateTime();
             $model->date       = $d->format('Y-m-d H:i:s');
@@ -145,8 +146,8 @@ class DefaultController extends Controller
      */
     protected function sendEmail($model, $notifier)
     {
-        $subject = 'Vasiliev\'s site order';
-        $headers = "From: Васильев <{pr@zimaevents.ru}>\r\n" .
+        $subject = Yii::app()->params->siteName.' site order';
+        $headers = "From: ".Yii::app()->params->siteName." <{pr@zimaevents.ru}>\r\n" .
             "Reply-To: pr@zimaevents.ru\r\n" .
             "MIME-Version: 1.0\r\n" .
             "Content-type: text/plain; charset=UTF-8";
@@ -183,6 +184,7 @@ class DefaultController extends Controller
             $model->ticket     = $_POST['Orders']['type'];
             $model->attributes = $_POST['Orders'];
             $model->page       = Yii::app()->request->cookies['p']->value;
+            $model->source     = isset($_GET['source']) ? (int) $_GET['source'] : 1;
             $model->ip         = Yii::app()->request->userHostAddress;
             $d                 = new DateTime();
             $model->date       = $d->format('Y-m-d H:i:s');
